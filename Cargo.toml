@@ -1,0 +1,23 @@
+[package]
+name = "enc_rtti"
+version = "0.1.0"
+authors = ["ibldzn <notadummy21@gmail.com>"]
+edition = "2021"
+description = "Encrypt MSVC's C++ RTTI"
+readme = "README.md"
+repository = "https://github.com/ibldzn/enc_rtti"
+license = "MIT"
+keywords = []
+categories = []
+
+[dependencies]
+rand = "0.8.4"
+regex = "1.5.4"
+anyhow = "1.0.49"
+
+[profile.release]
+lto = true
+debug = false
+panic = "abort"
+opt-level = 3
+codegen-units = 1
